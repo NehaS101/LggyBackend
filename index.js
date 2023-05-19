@@ -22,6 +22,10 @@ app.use("/m",MumbaiRouter)
 app.use("/b",BangloreRouter)
 app.use("/zoom",CarRouter)
 app.use("/admin", AdminRouter)
+
+app.get("/",(req,res)=>{
+    res.send("Welcome")
+})
 app.listen(process.env.port,async()=>{
     try {
         await connection
