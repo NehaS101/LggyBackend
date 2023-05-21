@@ -8,7 +8,7 @@ AdminRouter.post("/post",async(req,res)=>{
         const new_data = new AdminModel(data)
         await new_data.save()
         res.send({
-            "Message":"Product added Successfully",
+            Message:"Product added Successfully",
             "Data": new_data
         }) 
     } catch (error) {
